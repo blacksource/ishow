@@ -10,13 +10,32 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120219155433) do
+ActiveRecord::Schema.define(:version => 20120220161701) do
+
+  create_table "product_images", :force => true do |t|
+    t.integer  "product_id"
+    t.string   "url_s"
+    t.string   "url_b"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "products", :force => true do |t|
+    t.string   "name"
+    t.decimal  "price",      :precision => 10, :scale => 0
+    t.string   "url"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "image_url"
+  end
 
   create_table "users", :force => true do |t|
     t.string   "email"
     t.string   "password"
-    t.string   "name"
+    t.string   "nick_name"
+    t.string   "real_name"
     t.integer  "sex"
+    t.date     "birthdat"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
