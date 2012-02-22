@@ -1,0 +1,24 @@
+notice:<%=flash[:notice]%>
+<div>
+	<div style="float:left">
+		<% form_for @user, :url=>"/login" do |f| %>
+			<div>
+				<%= f.label :email  %>
+				<%= f.text_field :email %>
+			</div>
+			<div>
+				<%= f.label :password %>
+				<%= f.password_field :password %>
+			</div>
+			<div>
+				<%= f.submit "登录" %>
+			</div>
+		<% end %>
+	</div>
+	<div>
+		<ul>
+			<li><a href="#">新浪微博</a></li>
+			<li><a href="#">淘宝</a></li>
+		</ul>
+	</div>
+</div>

@@ -2,3 +2,33 @@ ul li
 {
 	display: inline;
 }
+
+body
+{
+	background-color: rgba(0, 0, 0, 0.25);
+}
+
+#user_email, #user_password {
+  width: 330px;
+  height: 26px;
+  border: 0 none #ffffff;
+	-webkit-border-radius: 5px;
+	-moz-border-radius: 5px;
+	border-radius: 5px;
+  padding: 5px 8px;
+  font-size: 120%;
+  line-height: 28px;
+  vertical-align: top;
+  outline: none;
+  -webkit-box-shadow: inset 3px 3px 2px rgba(0,0,0,0.25);
+  -moz-box-shadow: inset 3px 3px 2px rgba(0,0,0,0.25);
+  box-shadow: inset 3px 3px 2px rgba(0,0,0,0.25);
+
+  /*border-color:#7FB219;*/
+}
+
+#user_email:focus, #user_password:focus {
+  -webkit-box-shadow: inset 3px 3px 5px rgba(0,0,0,0.333), 0 0 10px #99cc00;
+  -moz-box-shadow: inset 3px 3px 5px rgba(0,0,0,0.333), 0 0 10px #99cc00;
+  box-shadow: inset 3px 3px 5px rgba(0,0,0,0.333), 0 0 10px #99cc00;
+}

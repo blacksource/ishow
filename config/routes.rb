@@ -1,4 +1,8 @@
 Ishow::Application.routes.draw do
+  match "login" => "users#login"
+
+  get "users/register"
+
   get "products" => "products#index"
 
   get "products/detail"
