@@ -1,6 +1,10 @@
 Ishow::Application.routes.draw do
   match "login" => "users#login"
 
+  match "products/:id" => "products#detail"
+
+  match "shares/new" => "shares#new"
+
   get "users/register"
 
   get "products" => "products#index"
