@@ -1,21 +1,52 @@
+<link href="/javascripts/uploadify/uploadify.css" media="screen" rel="stylesheet" type="text/css">
+
 <% form_for @share, :url=>"/shares/create" do |f| %>
-	<div>
-		<span>ProductName:</span>
-		<input/>
+	<div class="share">
+		<div class="share_item">
+			<span>晒单商品:</span>
+			<input type="text" class="text_input ipt_long" value=<%=@product.name%>/>
+		</div>
+		<div class="share_item">
+			<span>标题:</span>
+			<%= f.text_field :title, :class=>"text_input ipt_long" %>
+		</div>
+		<div class="share_item">
+			<span>评价:</span>
+			<%= f.text_area :comment, :class=>"text_input", :rows=>"3" %>
+		</div>
+		<div class="share_item">
+			<span>上传图片:</span>
+			<input id="file_upload" type="file" name="file_upload" />
+		</div>	
+		<ul id="share_imgs" class="share_imgs">
+		</ul>	
+		<div><%= f.submit "发布", :class=>"btn" %></div>
 	</div>
-	<div>
-		<span></span>
-	</div>
+		
 <% end %>
 
 
 
-<dl>
+<!-- <script type="text/javascript" src="/javascripts/uploadify/swfobject.js"></script> -->
+<script type="text/javascript" src="/javascripts/uploadify/jquery.uploadify.js"></script>
+<script type="text/javascript">
+// <![CDATA[
+$(document).ready(function() {
+  $('#file_upload').uploadify({
+    'swf'  				: '/javascripts/uploadify/uploadify.swf',
+    'uploader'    		: '/uploadify/upload.html',
+    'checkExisting' 	: '/uploadify/check',
+    'cancelImage' 		: '/javascripts/uploadify/uploadify-cancel.png',
+    'folder'    		: '/uploads',
+    'multi'				: true,
+    'auto'      		: true,
+    'buttonText' 		: '浏览',
+    'width'				: 80,
+    'onUploadSuccess' 	: function(file, data, response){
+		$("#share_imgs").append(data);    	
+    }
+  });
+});
+// ]]>
+</script>
 
-<dt>标题</dt>
-
-<dd>内容1</dd>
-
-<dd>内容2</dd>
-
-</dl>

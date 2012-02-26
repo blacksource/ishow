@@ -84,6 +84,24 @@ ul li
 }
 /************product_list end************/
 
+/************share start************/
+.share_item
+{
+  margin-top:10px;
+}
+.share_item span
+{
+  display: inline-block;
+  width:80px;
+  text-align: right;
+  margin-right:6px;
+}
+.share_imgs li
+{
+  display: block;
+}
+/************share end************/
+
 /************footer start************/
 .footer
 {
@@ -93,6 +111,36 @@ ul li
   bottom: 0px;
 }
 /************footer end************/
+
+/************common start************/
+.text_input
+{
+  min-height:30px;
+  min-width:100px;
+  background:url(/images/input-bg.png) white;
+  border-radius:4px;
+  border:solid 1px #BBB;
+  /*box-shadow: inset 3px 3px 2px rgba(0,0,0,0.25);*/
+}
+.text_input:focus
+{
+  box-shadow: 0 0 10px #F69;
+}
+
+.ipt_long
+{
+  width:350px;
+}
+
+.btn
+{
+  width:100px;
+  height:35px;
+  background:#F69;
+  border:1px solid #F69;
+  border-radius:4px;
+}
+/************common start************/
 
 
 #user_email, #user_password {
