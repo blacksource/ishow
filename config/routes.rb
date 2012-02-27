@@ -8,6 +8,8 @@ Ishow::Application.routes.draw do
 
   match "products/:id/share" => "shares#new"
 
+  match "shares/create" => "shares#create"
+
   get "users/register"
 
   get "products" => "products#index"

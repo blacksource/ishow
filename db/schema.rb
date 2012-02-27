@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20120224155223) do
+ActiveRecord::Schema.define(:version => 20120227135000) do
 
   create_table "product_images", :force => true do |t|
     t.integer  "product_id"
@@ -24,9 +24,17 @@ ActiveRecord::Schema.define(:version => 20120224155223) do
     t.string   "name"
     t.decimal  "price",      :precision => 10, :scale => 0
     t.string   "url"
+    t.string   "img"
     t.datetime "created_at"
     t.datetime "updated_at"
-    t.string   "image_url"
+  end
+
+  create_table "share_images", :force => true do |t|
+    t.integer  "share_id"
+    t.string   "img_s"
+    t.string   "img_b"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "shares", :force => true do |t|

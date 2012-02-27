@@ -23,8 +23,9 @@ class UploadifyController < ApplicationController
     # render :template => "cell"
 
     # render :json => { :pic_path => img_server_url + File.join(file_folder, new_name).to_s , :name => new_name }.to_json, :content_type => 'text/xml'
-    @share_image = ProductImages.new
-    @share_image.url_s = "/uploads/#{file_name}"
+    @share_image = ShareImage.new
+    @share_image.img_b = "/uploads/#{file_name}"
+    @share_image.img_s = file_name
     respond_to do |format|
       format.html
       # format.json {render :inline => "aaaa"  }

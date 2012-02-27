@@ -1,5 +1,8 @@
 <li>
-	<div><img src="<%= @share_image.url_s %>"/></div>
+	<div>
+		<img src="<%= @share_image.img_b %>"/>
+		<input name="share_images[][img_b]" type="hidden" value="<%= @share_image.img_s%>" />
+	</div>
 	<div>
 		<div><input type="radio" name="cover"/><label>设为封面</label></div>
 		<div><input type="button" value="删除" /></div>
