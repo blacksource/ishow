@@ -1,9 +1,16 @@
 <div>
-	<span><%=@product.name%></span>
-	<img src="">
-	...
-	<% if @product.product_images %>
-	<% end %>
+	<h1 class="prod_t"><%=@product.name%></h1>
+	<div>
+		<div class="prod_l">这里是商品介绍</div>
+		<div class="prod_r">
+			<div><img src="<%=@product.img%>"></div>
+			<div>
+				<% @product.product_images.each do |img| %>
+					<img src="/products/<%= img.img_s%>"/>
+				<% end %>
+			</div>
+		</div>
+	</div>
 </div>
 <div>
 	Share

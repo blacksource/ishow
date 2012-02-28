@@ -84,6 +84,23 @@ ul li
 }
 /************product_list end************/
 
+/************product_detail start************/
+.prod_t
+{
+  font-size:22px;
+}
+.prod_l
+{
+  float: left;
+  width:200px;
+  height:300px;
+}
+.prod_r
+{
+  
+}
+/************product_detail end************/
+
 /************share start************/
 .share_item
 {

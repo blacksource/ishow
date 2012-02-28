@@ -14,8 +14,8 @@ ActiveRecord::Schema.define(:version => 20120227135000) do
 
   create_table "product_images", :force => true do |t|
     t.integer  "product_id"
-    t.string   "url_s"
-    t.string   "url_b"
+    t.string   "img_s"
+    t.string   "img_b"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
