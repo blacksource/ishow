@@ -85,6 +85,10 @@ ul li
 /************product_list end************/
 
 /************product_detail start************/
+.prod_d
+{
+  width:900px;
+}
 .prod_t
 {
   font-size:22px;
@@ -102,6 +106,16 @@ ul li
 /************product_detail end************/
 
 /************share start************/
+.share_l
+{
+  float:left;
+  width:100px;  
+}
+.share_r
+{
+  
+}
+
 .share_item
 {
   margin-top:10px;

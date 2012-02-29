@@ -1,17 +1,45 @@
-<div>
-	<h1 class="prod_t"><%=@product.name%></h1>
+<div class="prod">
 	<div>
-		<div class="prod_l">这里是商品介绍</div>
-		<div class="prod_r">
-			<div><img src="<%=@product.img%>"></div>
-			<div>
-				<% @product.product_images.each do |img| %>
-					<img src="/products/<%= img.img_s%>"/>
-				<% end %>
+		<h1 class="prod_t"><%=@product.name%></h1>
+		<div>
+			<div class="prod_l">
+				这里是商品介绍
+				<div>
+					<span>¥218</span><a href="<%=@product.url%>" target="_blank">购买</a>
+				</div>
+				<div>
+					<a href="/products/<%=@product.id%>/share">晒单</a>
+					<div><span>第一名</span><span>返</span><span>¥180</span></div>
+					<div><span>第二名</span><span>返</span><span>¥100</span></div>
+					<div><span>第三名</span><span>返</span><span>¥80</span></div>
+					<div><span>其余</span><span>返</span><span>¥50</span></div>
+				</div>
+			</div>
+			<div class="prod_r">
+				<div><img src="<%=@product.img%>"></div>
+				<div>
+					<% @product.product_images.each do |img| %>
+						<img src="/products/<%= img.img_s%>"/>
+					<% end %>
+				</div>
 			</div>
 		</div>
 	</div>
-</div>
-<div>
-	Share
+	<ul>
+		<% @product.shares.each do |share| %>
+			<li>
+				<div class="share_l">
+					<a href="">
+						<img src="/images/head.jpg">
+					</a>
+				</div>
+				<div class="share_r">
+					<p><a href="/">blacksource</a>：<%=share.comment%></p>
+					<div>
+						<img src="/uploads/share1.jpg">
+					</div>
+				</div>
+			</li>
+		<% end %>
+	</ul>
 </div>
