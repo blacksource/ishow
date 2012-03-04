@@ -36,7 +36,11 @@
 				<div class="share_r">
 					<p><a href="/">blacksource</a>：<%=share.comment%></p>
 					<div>
-						<img src="/uploads/share1.jpg">
+						<ul> 
+							<% share.share_images.each do |img| %>
+								<li><img src="/shares/1/<%=img.img_b%>"></li>
+							<% end %>
+						</ul>
 					</div>
 				</div>
 			</li>

@@ -1,7 +1,8 @@
 <li>
 	<div>
-		<img src="<%= @share_image.img_b %>"/>
-		<input name="share_images[][img_b]" type="hidden" value="<%= @share_image.img_s%>" />
+		<img src="<%= @share_image.picture.url %>"/>
+		<input name="share_images[][img_b]" type="hidden" value="<%= @share_image.picture.url%>" />
+		<input name="share_images[][img_s]" type="hidden" value="<%= @share_image.picture.thumb.url%>" />
 	</div>
 	<div>
 		<div><input type="radio" name="cover"/><label>设为封面</label></div>

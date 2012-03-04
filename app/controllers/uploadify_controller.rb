@@ -1,9 +1,21 @@
+require "fileutils"  
 class UploadifyController < ApplicationController
 	protect_from_forgery :except => :upload  
 	skip_before_filter :verify_authenticity_token  
   layout nil
 
   def upload
+    # logger.debug "filedata=#{params[:Filedata]}"
+    # share_image = ShareImage.new(:picture=>params[:Filedata])
+    
+    @share_image = ShareImage.new(:picture=>params[:picture])
+    # logger.debug "url======#{@share_image.picture.url}"
+    # logger.debug "current_path======#{@share_image.picture.current_path}"
+    # FileUtils.move(@share_image.picture.current_path, "#{Rails.root.to_s}/public/uploads/a.png")
+    respond_to do |format|
+      format.html
+    end
+=begin
   	file_name = params[:Filename]
     file_name = Time.now.strftime("%y%m%d%I%M%S") + "#{File.extname(file_name)}"
   	file_data = params[:Filedata]
@@ -32,6 +44,7 @@ class UploadifyController < ApplicationController
     end
     # html = render :partial => "uploadify/cell"
     # render :text => "aaa"
+=end
   end
 
   def check
