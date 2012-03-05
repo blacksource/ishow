@@ -1,3 +1,9 @@
+
+<script src="/javascripts/galleria/galleria-1.2.6.min.js"></script>
+<script>
+    Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+</script>
+
 <div class="prod">
 	<div>
 		<h1 class="prod_t"><%=@product.name%></h1>
@@ -35,15 +41,19 @@
 				</div>
 				<div class="share_r">
 					<p><a href="/">blacksource</a>：<%=share.comment%></p>
-					<div>
-						<ul> 
-							<% share.share_images.each do |img| %>
-								<li><img src="/shares/1/<%=img.img_b%>"></li>
-							<% end %>
-						</ul>
+					<div class="gallery_<%=share.id%>">
+						
 					</div>
+					<script>
+					$(".gallery_<%=share.id%>").galleria({
+				        height: 500,
+				        width: 500,
+				        data_source: <%=share.to_s%>
+				    });
+					</script>
 				</div>
 			</li>
 		<% end %>
 	</ul>
 </div>
+

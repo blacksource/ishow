@@ -1,0 +1,30 @@
+<html>
+    <head>
+        <script src="http://ajax.googleapis.com/ajax/libs/jquery/1/jquery.js"></script>
+        <script src="/javascripts/galleria/galleria-1.2.6.min.js"></script>
+    </head>
+    <body>
+        <div id="gallery">
+        </div>
+        <script>
+            Galleria.loadTheme('/javascripts/galleria/themes/classic/galleria.classic.min.js');
+            
+            var data = [
+                {
+                    image: '/shares/1/12030521505444662.png',
+                    thumb: '/shares/1/12030521505444662_s.png',
+                },
+                {
+                    image: '/shares/1/120305215053908484.png',
+                    thumb: '/shares/1/120305215053908484_s.png',
+                }
+            ];
+
+            $("#gallery").galleria({
+                height: 400,
+                width: 300,
+                data_source: data
+            });
+        </script>
+    </body>
+</html>
