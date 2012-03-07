@@ -9,17 +9,27 @@
 <body>
 	<div class="main">
 		<div class="header">
-			<div class="logo">logo</div>
-			<ul class="menu">
-				<li>
-					<a href="/"><img src="/images/head.jpg"/></a>
-				</li>
-				<li>
-					<a href=""><span class="menu_message"></span></a>
-				</li>
-				<li>Shares</li>
-				<li>Votes</li>
-			</ul>
+			<div class="header_inner">
+				<div class="logo"></div>
+				<ul class="menu">
+					<li>
+						<a href=""><span class="menu_message"></span></a>
+					</li>
+					<li><a href="/">首页</a></li>
+					<li><a href="/products">XX商品</a></li>
+					<li><a href="#"></a>往期商品</li>
+					<li><a href="#"></a>美人榜</li>
+					<li>
+						<a href="/"><img class="head_s" src="/images/head.jpg"/><span>blacksource</span>下拉列表</a>
+					</li>
+				</ul>
+				<ul class="user_pnl">
+					<li>我的主页</li>
+					<li>私信</li>
+					<li>设置</li>
+					<li><a href="/logout">退出</a></li>
+				</ul>
+			</div>
 		</div>
 		<div class="wrap">
 			<%= yield %>

@@ -2,7 +2,10 @@ Ishow::Application.routes.draw do
   match "uploadify/upload" => "uploadify#upload"
   match "uploadify/check" => "uploadify#check"
 
+  match "register" => "users#register"
   match "login" => "users#login"
+  match "logout" => "users#logout"
+  match "users/crete" => "users#create"
 
   match "products/:id" => "products#detail"
 
